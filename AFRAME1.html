@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+		<script> var boxE1 = document.querySelector('a-box');
+				 boxE1.addEventListener('mouseenter'; function () {boxE1.setAttribute('scale', {x:2, y: 2, z:2})});
+	 	</script>
+	</head>
+		<body>
+			<a-scene>
+				<a-box id="box" geometry="primitive: box" material="color: orange">
+					<a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
+      repeat="indefinite"></a-animation>
+				</a-box>
+				<a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+  				<a-sky color="#222"></a-sky>
+  				<a-sky src="#skyTexture"></a-sky>
+			</a-scene>
+		</body>
+</html>
